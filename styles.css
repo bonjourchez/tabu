@@ -1,0 +1,157 @@
+body {
+  background-color: black;
+  font-family: Ubuntu, Arial;
+  margin: 0em;
+  min-height: 100%;
+  padding: 100px;
+}
+
+br {
+  margin-bottom: 35px;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+label {
+  color: #dddddd;
+  font-weight: 400;
+  margin: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 150px;
+}
+
+h2 {
+  font-size: 120px;
+}
+
+h3 {
+  font-size: 90px;
+}
+
+p,
+label {
+  font-size: 60px;
+  margin: 10px;
+}
+
+a,
+.click {
+  font-size: 70px;
+  text-decoration: underline;
+}
+
+select {
+  background-color: black;
+  border: 5px solid #dddddd;
+  border-radius: 40px;
+  color: #dddddd;
+  font-family: Ubuntu, Arial;
+  font-size: 50px;
+  margin: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+}
+
+.small {
+  font-size: 40px;
+}
+
+.click {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.layer1 {
+  display: flex;
+  width: 80vw;
+  padding: 50px;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  border-radius: 24px;
+  border: 1px solid #252525;
+  background: #202020;
+}
+
+.layer2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  flex: 1 0 0;
+  border-radius: 16px;
+  border: 1px solid #252525;
+  background: #2c2c2c;
+}
+
+#center {
+  height: fit-content;
+  padding: 80px;
+}
+
+.tabu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.next {
+  display: flex;
+  padding: 60px 80px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 24px;
+  background: #1f6656;
+  box-shadow: 10px 10px 0px 0px #000, 0px 0px 100px 0px rgba(255, 255, 255, 0.25);
+}
+
+.skip {
+    display: flex;
+    padding: 60px 80px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 24px;
+    background: #752323;
+    box-shadow: 10px 10px 0px 0px #000, 0px 0px 100px 0px rgba(255, 255, 255, 0.25);
+  
+}
+
+.next-round {
+    display: flex;
+    padding: 60px 80px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 24px;
+    background: #2C2C2C;  
+}

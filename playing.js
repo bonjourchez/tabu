@@ -84,7 +84,7 @@ function startGame() {
     setPlaying(true);
     turn = 1 - turn;
 
-    timeLeft = 60;
+    timeLeft = 5;
     timer();
     timerRun = setInterval(timer, 1000);
 
@@ -108,35 +108,33 @@ function timer() {
 function setPlaying(playing) {
     let get = (id) => document.getElementById(id);
     if (playing) {
-        get("currWord").style.display = "block";
-        get("buttons").style.display = "flex";
-        get("startButton").style.display = "none";
-        get("timer").style.display = "block";
+        get("round-playing").style.display = "flex";
+        get("round-over").style.display = "none";
+        get("wordbank").style.display = "none";
         get("category").disabled = true;
     } else {
-        get("currWord").style.display = "none";
-        get("buttons").style.display = "none";
-        get("startButton").style.display = "block";
-        get("timer").style.display = "none";
+        get("round-playing").style.display = "none";
+        get("round-over").style.display = "flex";
+        get("wordbank").style.display = "none";
         get("category").disabled = false;
     }
 
     // this is reversed bc we highlight the next player
     if (turn == 1) {
-        document.getElementById("score0").style.color = "lightgreen";
-        document.getElementById("score1").style.color = "gray";
+        document.getElementById("score0").style.color = "#F1F1F1";
+        document.getElementById("score1").style.color = "#858585";
     } else {
-        document.getElementById("score0").style.color = "gray";
-        document.getElementById("score1").style.color = "lightgreen";
+        document.getElementById("score0").style.color = "#858585";
+        document.getElementById("score1").style.color = "#F1F1F1";
     }
 }
 
 // `word` is array of length 7.
 // Elements are (timestamp, word, forbidden1, ...)
 function setCurrWord(word) {
-    document.getElementById("targetWord").innerHTML = word[1];
+    document.getElementById("targetWord").innerHTML = word[1].toUpperCase();
     for (let i = 0; i < 5; i++) {
-        document.getElementById("tabu" + i).innerHTML = word[i + 2];
+        document.getElementById("tabu" + i).innerHTML = word[i + 2].toUpperCase();
     }
     document.getElementById("score0").innerHTML = score[0];
     document.getElementById("score1").innerHTML = score[1];
@@ -155,6 +153,7 @@ function main() {
     updateCategory();
     setPlaying(false);
     setCurrWord(ALL_WORDS[0]);
+    startGame();
 }
 
 
