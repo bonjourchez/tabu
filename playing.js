@@ -84,7 +84,7 @@ function startGame() {
     setPlaying(true);
     turn = 1 - turn;
 
-    timeLeft = 5;
+    timeLeft = 60;
     timer();
     timerRun = setInterval(timer, 1000);
 
